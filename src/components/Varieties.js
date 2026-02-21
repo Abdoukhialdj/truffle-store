@@ -1,11 +1,19 @@
 export default function Varieties({ onSelectPackage }) {
     const packages = [
         {
+            qty: "5kg",
+            grade: "Sampler Pack",
+            name: "5 kg",
+            desc: "Perfect for sampling our quality or for small artisanal boutiques.",
+            image: "/5kg.jpg",
+            tags: ["White Truffle", "Grade A", "p2p&p2c Delivery"],
+        },
+        {
             qty: "10kg",
             grade: "Starter Pack",
             name: "10 kg",
             desc: "Ideal for first-time buyers and small-scale wholesale orders.",
-            image: "/10kg.png",
+            image: "/10kg.jpg",
             tags: ["White Truffle", "Grade A", "p2p&p2c Delivery"],
         },
         {
@@ -13,7 +21,7 @@ export default function Varieties({ onSelectPackage }) {
             grade: "Standard Package",
             name: "25 kg",
             desc: "Our most popular bulk package — perfect for regular wholesale buyers.",
-            image: "/25kg.png",
+            image: "/25kg.jpg",
             tags: ["White Truffle", "Grade A", "p2p&p2c Delivery"],
             featured: true,
             badge: "Best Value",
@@ -23,7 +31,7 @@ export default function Varieties({ onSelectPackage }) {
             grade: "Bulk Order",
             name: "50 kg",
             desc: "Maximum volume for large distributors and commercial partners.",
-            image: "/50kg.png",
+            image: "/50kg.jpg",
             tags: ["White Truffle", "Grade A", "p2p&p2c Delivery"],
         },
     ];
@@ -37,7 +45,7 @@ export default function Varieties({ onSelectPackage }) {
                         Wholesale <em>Packages</em>
                     </h2>
                     <p className="section-subtitle">
-                        Premium Grade A White Truffle — available in three bulk package sizes for every order scale.
+                        Premium Grade A White Truffle — available in four bulk package sizes for every order scale.
                     </p>
                 </div>
                 <div className="cards-grid">

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -10,10 +10,7 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 export default function Home() {
-  const [selectedQuantity, setSelectedQuantity] = useState("");
-
-  const handleSelectPackage = (qty) => {
-    setSelectedQuantity(qty);
+  const handleSelectPackage = () => {
     // Smooth scroll to contact
     const contactSection = document.getElementById("contact");
     if (contactSection) {
@@ -59,7 +56,7 @@ export default function Home() {
       <About />
       <Varieties onSelectPackage={handleSelectPackage} />
       <Wholesale />
-      <Contact selectedQuantity={selectedQuantity} />
+      <Contact />
       <Footer />
     </main>
   );

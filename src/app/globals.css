@@ -599,8 +599,10 @@ button {
 
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .product-card {
@@ -665,7 +667,7 @@ button {
 /* Real product image (replaces placeholder) */
 .card-image {
   width: 100%;
-  height: 460px;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
   border-bottom: 1px solid var(--border);
   background: #0d0b07;
@@ -1195,9 +1197,9 @@ textarea {
     margin: 0 auto;
   }
 
-  /* Card images — cap height so they don't fill the whole phone screen */
+  /* Card images — maintain square aspect ratio */
   .card-image {
-    height: 260px;
+    height: auto;
   }
 
   /* Form rows — stack on mobile */
@@ -1265,9 +1267,9 @@ textarea {
     font-size: 1.8rem;
   }
 
-  /* Card image — even shorter on very small phones */
+  /* Card image — maintain square aspect ratio */
   .card-image {
-    height: 200px;
+    height: auto;
   }
 
   /* Container padding */
