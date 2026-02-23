@@ -13,7 +13,7 @@ export default function Varieties({ onSelectPackage }) {
             grade: "Sampler Pack",
             name: "5 kg",
             desc: "Perfect for sampling our quality or for small artisanal boutiques.",
-            image: "/5kg.jpg",
+            image: "/5kg.png",
             tags: ["White Truffle", "Grade A", "p2p&p2c Delivery"],
         },
         {
@@ -21,7 +21,7 @@ export default function Varieties({ onSelectPackage }) {
             grade: "Starter Pack",
             name: "10 kg",
             desc: "Ideal for first-time buyers and small-scale wholesale orders.",
-            image: "/10kg.jpg",
+            image: "/10kg.png",
             tags: ["White Truffle", "Grade A", "p2p&p2c Delivery"],
         },
         {
@@ -29,7 +29,7 @@ export default function Varieties({ onSelectPackage }) {
             grade: "Standard Package",
             name: "25 kg",
             desc: "Our most popular bulk package — perfect for regular wholesale buyers.",
-            image: "/25kg.jpg",
+            image: "/25kg.png",
             tags: ["White Truffle", "Grade A", "p2p&p2c Delivery"],
             featured: true,
             badge: "Best Value",
@@ -39,7 +39,7 @@ export default function Varieties({ onSelectPackage }) {
             grade: "Bulk Order",
             name: "50 kg",
             desc: "Maximum volume for large distributors and commercial partners.",
-            image: "/50kg.jpg",
+            image: "/50kg.png",
             tags: ["White Truffle", "Grade A", "p2p&p2c Delivery"],
         },
     ];
