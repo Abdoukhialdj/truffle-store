@@ -15,6 +15,8 @@ export default function Varieties({ onSelectPackage }) {
             desc: "Perfect for sampling our quality or for small artisanal boutiques.",
             image: "/5kg.png",
             tags: ["White Truffle", "Grade A", "p2p&p2c Delivery"],
+            featured: true,
+            badge: "Popular",
         },
         {
             qty: "10kg",
@@ -23,8 +25,6 @@ export default function Varieties({ onSelectPackage }) {
             desc: "Ideal for first-time buyers and small-scale wholesale orders.",
             image: "/10kg.png",
             tags: ["White Truffle", "Grade A", "p2p&p2c Delivery"],
-            featured: true,
-            badge: "Popular",
         },
         {
             qty: "25kg",

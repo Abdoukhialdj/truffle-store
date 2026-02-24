@@ -23,6 +23,7 @@
   --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   --font-serif: 'Cormorant Garamond', Georgia, serif;
   --font-sans: 'Inter', system-ui, sans-serif;
+  --font-classic-numbers: 'Times New Roman', Times, Baskerville, Georgia, serif;
   --max-w: 1180px;
 }
 
@@ -418,8 +419,8 @@ button {
 
 .stat-num {
   display: block;
-  font-family: var(--font-serif);
-  font-size: 2rem;
+  font-family: var(--font-classic-numbers);
+  font-size: 2.2rem;
   font-weight: 500;
   color: var(--gold-light);
   line-height: 1;
@@ -790,8 +791,8 @@ button {
 }
 
 .card-name {
-  font-family: var(--font-serif);
-  font-size: 1.6rem;
+  font-family: var(--font-classic-numbers);
+  font-size: 1.7rem;
   font-weight: 400;
   color: var(--text-primary);
   margin-bottom: 0.5rem;
