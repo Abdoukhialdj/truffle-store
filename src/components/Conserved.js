@@ -1,12 +1,6 @@
 "use client";
 
-import { useRef, useState, useEffect } from "react";
-
 export default function Conserved({ onSelectPackage }) {
-    const scrollRef = useRef(null);
-    const [canScrollLeft, setCanScrollLeft] = useState(false);
-    const [canScrollRight, setCanScrollRight] = useState(true);
-
     const packages = [
         {
             qty: "3kg",
@@ -36,37 +30,6 @@ export default function Conserved({ onSelectPackage }) {
         },
     ];
 
-    const checkScroll = () => {
-        if (scrollRef.current) {
-            const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
-            setCanScrollLeft(scrollLeft > 10);
-            setCanScrollRight(scrollLeft + clientWidth < scrollWidth - 10);
-        }
-    };
-
-    useEffect(() => {
-        const el = scrollRef.current;
-        if (el) {
-            el.addEventListener("scroll", checkScroll);
-            checkScroll();
-            window.addEventListener("resize", checkScroll);
-            return () => {
-                el.removeEventListener("scroll", checkScroll);
-                window.removeEventListener("resize", checkScroll);
-            };
-        }
-    }, []);
-
-    const scroll = (direction) => {
-        if (scrollRef.current) {
-            const scrollAmount = 350;
-            scrollRef.current.scrollBy({
-                left: direction === "left" ? -scrollAmount : scrollAmount,
-                behavior: "smooth",
-            });
-        }
-    };
-
     return (
         <section className="varieties conserved-section" id="conserved">
             <div className="container">
@@ -81,15 +44,7 @@ export default function Conserved({ onSelectPackage }) {
                 </div>
 
                 <div className="varieties-wrapper" data-animate="fade-up">
-                    <button
-                        className={`scroll-arrow prev ${!canScrollLeft ? "disabled" : ""}`}
-                        onClick={() => scroll("left")}
-                        aria-label="Previous packages"
-                    >
-                        ←
-                    </button>
-
-                    <div className="cards-grid horizontal-scroll" ref={scrollRef}>
+                    <div className="cards-grid">
                         {packages.map((pkg, idx) => (
                             <div
                                 key={pkg.qty}
@@ -141,14 +96,6 @@ export default function Conserved({ onSelectPackage }) {
                             </div>
                         ))}
                     </div>
-
-                    <button
-                        className={`scroll-arrow next ${!canScrollRight ? "disabled" : ""}`}
-                        onClick={() => scroll("right")}
-                        aria-label="Next packages"
-                    >
-                        →
-                    </button>
                 </div>
             </div>
         </section>
