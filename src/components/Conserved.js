@@ -2,37 +2,37 @@
 
 import { useRef, useState, useEffect } from "react";
 
-export default function Varieties({ onSelectPackage }) {
+export default function Conserved({ onSelectPackage }) {
     const scrollRef = useRef(null);
     const [canScrollLeft, setCanScrollLeft] = useState(false);
     const [canScrollRight, setCanScrollRight] = useState(true);
 
     const packages = [
         {
+            qty: "3kg",
+            grade: "Artisan Conserva",
+            name: "3 kg",
+            desc: "Expertly preserved whole truffles in premium brine, ideal for high-end restaurants.",
+            image: "/conserved_3kg.png",
+            tags: ["Black Truffle", "Conserved", "Vacuum Sealed"],
+        },
+        {
             qty: "5kg",
-            grade: "Sampler Pack",
+            grade: "Selection Pack",
             name: "5 kg",
-            desc: "Perfect for sampling our quality or for small artisanal boutiques.",
-            image: "/5kg.png",
-            tags: ["White Truffle", "Grade A", "p2p&p2c Delivery"],
+            desc: "The perfect balance of quantity and preservation for boutique wholesalers.",
+            image: "/conserved_5kg.png",
+            tags: ["Black Truffle", "Conserved", "Vacuum Sealed"],
         },
         {
             qty: "10kg",
-            grade: "Starter Pack",
+            grade: "Business Bulk",
             name: "10 kg",
-            desc: "Ideal for first-time buyers and small-scale wholesale orders.",
-            image: "/10kg.png",
-            tags: ["White Truffle", "Grade A", "p2p&p2c Delivery"],
+            desc: "Standard wholesale volume for catering companies and large kitchens.",
+            image: "/conserved_10kg.png",
+            tags: ["Black Truffle", "Conserved", "Vacuum Sealed"],
             featured: true,
             badge: "Popular",
-        },
-        {
-            qty: "25kg",
-            grade: "Standard Package",
-            name: "25 kg",
-            desc: "Our high-volume bulk package — perfect for regular wholesale buyers.",
-            image: "/25kg.png",
-            tags: ["White Truffle", "Grade A", "p2p&p2c Delivery"],
         },
     ];
 
@@ -49,7 +49,6 @@ export default function Varieties({ onSelectPackage }) {
         if (el) {
             el.addEventListener("scroll", checkScroll);
             checkScroll();
-            // Also check on resize
             window.addEventListener("resize", checkScroll);
             return () => {
                 el.removeEventListener("scroll", checkScroll);
@@ -60,7 +59,7 @@ export default function Varieties({ onSelectPackage }) {
 
     const scroll = (direction) => {
         if (scrollRef.current) {
-            const scrollAmount = 350; // Approximating card width + gap
+            const scrollAmount = 350;
             scrollRef.current.scrollBy({
                 left: direction === "left" ? -scrollAmount : scrollAmount,
                 behavior: "smooth",
@@ -69,15 +68,15 @@ export default function Varieties({ onSelectPackage }) {
     };
 
     return (
-        <section className="varieties" id="varieties">
+        <section className="varieties conserved-section" id="conserved">
             <div className="container">
                 <div className="section-header" data-animate="fade-up">
-                    <span className="section-tag">White Truffle</span>
+                    <span className="section-tag">Preserved Excellence</span>
                     <h2 className="section-title">
-                        Wholesale <em>Packages</em>
+                        Conserved <em>Truffles</em>
                     </h2>
                     <p className="section-subtitle">
-                        Premium Grade A White Truffle — available in three bulk package sizes for every order scale.
+                        Long-lasting, expertly preserved black truffles for year-round availability without compromising on depth of flavor.
                     </p>
                 </div>
 
@@ -100,7 +99,22 @@ export default function Varieties({ onSelectPackage }) {
                             >
                                 {pkg.badge && <div className="card-badge">{pkg.badge}</div>}
                                 <div className="card-image">
-                                    <img src={pkg.image} alt={pkg.name} />
+                                    <div className="img-placeholder" style={{
+                                        width: '100%',
+                                        height: '100%',
+                                        background: 'linear-gradient(45deg, #1a1a1a, #2a2a2a)',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        color: '#B8963E',
+                                        fontSize: '0.8rem',
+                                        flexDirection: 'column',
+                                        gap: '10px'
+                                    }}>
+                                        <span style={{ fontSize: '2rem' }}>💎</span>
+                                        <span>Conserved {pkg.name}</span>
+                                    </div>
+                                    {/* <img src={pkg.image} alt={pkg.name} /> */}
                                 </div>
                                 <div className="card-body">
                                     <div className="card-grade">{pkg.grade}</div>
@@ -121,7 +135,7 @@ export default function Varieties({ onSelectPackage }) {
                                             onSelectPackage(pkg.qty);
                                         }}
                                     >
-                                        Order this package →
+                                        Order Conserved →
                                     </button>
                                 </div>
                             </div>

@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Varieties from "@/components/Varieties";
+import Conserved from "@/components/Conserved";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -54,6 +55,7 @@ export default function Home() {
       <Hero />
       <About />
       <Varieties onSelectPackage={handleSelectPackage} />
+      <Conserved onSelectPackage={handleSelectPackage} />
       <Contact />
       <Footer />
     </main>

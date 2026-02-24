@@ -35,7 +35,8 @@ export default function Navbar() {
 
     const navLinks = [
         { label: "About", href: "#about" },
-        { label: "Varieties", href: "#varieties" },
+        { label: "Fresh", href: "#varieties" },
+        { label: "Conserved", href: "#conserved" },
         { label: "Contact Us", href: "#contact", className: "nav-cta" },
     ];
 
