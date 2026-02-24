@@ -36,7 +36,7 @@ export default function Varieties({ onSelectPackage }) {
                 <div className="section-header" data-animate="fade-up">
                     <span className="section-tag">White Truffle</span>
                     <h2 className="section-title">
-                        Wholesale <em>Packages</em>
+                        Fresh <em>Truffles</em>
                     </h2>
                     <p className="section-subtitle">
                         Premium Grade A White Truffle — available in three bulk package sizes for every order scale.
