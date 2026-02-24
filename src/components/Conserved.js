@@ -8,7 +8,7 @@ export default function Conserved({ onSelectPackage }) {
             name: "3 kg (6 x 500g jars)",
             desc: "Expertly preserved whole truffles in premium brine. Sent in half-kilo jars.",
             image: "/conserved_3kg.png",
-            tags: ["Black Truffle", "Conserved", "Vacuum Sealed"],
+            tags: ["white truffle", "Conserved", "Vacuum Sealed"],
         },
         {
             qty: "5kg",
@@ -16,7 +16,7 @@ export default function Conserved({ onSelectPackage }) {
             name: "5 kg (10 x 500g jars)",
             desc: "The perfect balance of quantity and preservation. Sent in half-kilo jars.",
             image: "/conserved_5kg.png",
-            tags: ["Black Truffle", "Conserved", "Vacuum Sealed"],
+            tags: ["white truffle", "Conserved", "Vacuum Sealed"],
         },
         {
             qty: "10kg",
@@ -24,7 +24,7 @@ export default function Conserved({ onSelectPackage }) {
             name: "10 kg (20 x 500g jars)",
             desc: "Standard wholesale volume for catering companies. Sent in half-kilo jars.",
             image: "/conserved_10kg.png",
-            tags: ["Black Truffle", "Conserved", "Vacuum Sealed"],
+            tags: ["white truffle", "Conserved", "Vacuum Sealed"],
             featured: true,
             badge: "Popular",
         },
@@ -39,7 +39,7 @@ export default function Conserved({ onSelectPackage }) {
                         Conserved <em>Truffles</em>
                     </h2>
                     <p className="section-subtitle">
-                        Long-lasting, expertly preserved black truffles for year-round availability without compromising on depth of flavor.
+                        Long-lasting, expertly preserved white truffles for year-round availability without compromising on depth of flavor.
                     </p>
                 </div>
 
