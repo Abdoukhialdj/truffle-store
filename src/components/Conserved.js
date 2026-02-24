@@ -7,7 +7,7 @@ export default function Conserved({ onSelectPackage }) {
             grade: "Artisan Conserva",
             name: "3 kg (6 x 500g jars)",
             desc: "Expertly preserved whole truffles in premium brine. Sent in half-kilo jars.",
-            image: "/conserved_3kg.png",
+            image: "/3kg conserved.png",
             tags: ["white truffle", "Conserved", "Vacuum Sealed"],
         },
         {
@@ -15,7 +15,7 @@ export default function Conserved({ onSelectPackage }) {
             grade: "Selection Pack",
             name: "5 kg (10 x 500g jars)",
             desc: "The perfect balance of quantity and preservation. Sent in half-kilo jars.",
-            image: "/conserved_5kg.png",
+            image: "/5kg conserved.png",
             tags: ["white truffle", "Conserved", "Vacuum Sealed"],
         },
         {
@@ -23,7 +23,7 @@ export default function Conserved({ onSelectPackage }) {
             grade: "Business Bulk",
             name: "10 kg (20 x 500g jars)",
             desc: "Standard wholesale volume for catering companies. Sent in half-kilo jars.",
-            image: "/conserved_10kg.png",
+            image: "/10kg conserved.png",
             tags: ["white truffle", "Conserved", "Vacuum Sealed"],
             featured: true,
             badge: "Popular",
@@ -54,22 +54,7 @@ export default function Conserved({ onSelectPackage }) {
                             >
                                 {pkg.badge && <div className="card-badge">{pkg.badge}</div>}
                                 <div className="card-image">
-                                    <div className="img-placeholder" style={{
-                                        width: '100%',
-                                        height: '100%',
-                                        background: 'linear-gradient(45deg, #1a1a1a, #2a2a2a)',
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        justifyContent: 'center',
-                                        color: '#B8963E',
-                                        fontSize: '0.8rem',
-                                        flexDirection: 'column',
-                                        gap: '10px'
-                                    }}>
-                                        <span style={{ fontSize: '2rem' }}>💎</span>
-                                        <span>Conserved {pkg.name}</span>
-                                    </div>
-                                    {/* <img src={pkg.image} alt={pkg.name} /> */}
+                                    <img src={pkg.image} alt={pkg.name} />
                                 </div>
                                 <div className="card-body">
                                     <div className="card-grade">{pkg.grade}</div>
